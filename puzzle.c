@@ -9,11 +9,11 @@ Square *** setUpPuzzle(int ** puzzle){
 	/* loop through rows */
 	for(i = 0; i<9; i++){
 		
-		sudoku[i] = (Square**)malloc(sizeof(square*)*9);
+		sudoku[i] = (Square**)malloc(sizeof(Square*)*9);
 		
 		/*loop through columns */
 		for(j = 0; j<9; j++){
-			sudoku[i][j] = (Square*)malloc(sizeof(square)*9);
+			sudoku[i][j] = (Square*)malloc(sizeof(Square)*9);
 			
 			sudoku[i][j]->number = puzzle[i][j]; 
 			

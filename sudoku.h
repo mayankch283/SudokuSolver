@@ -20,4 +20,4 @@ typedef struct Square{
 
 int ** createPuzzle();
 void printPuzzle(int ** puzzle);
-Swuare *** setUpPuzzle(int ** puzzle);
+Square *** setUpPuzzle(int ** puzzle);
