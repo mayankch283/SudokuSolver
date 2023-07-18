@@ -7,12 +7,12 @@ Square *** setUpPuzzle(int ** puzzle){
 	sudoku = (Square***)malloc(sizeof(Square**)*9);
 	
 	/* loop through rows */
-	for(i = 0; i<9; i++){
+	for(i = 0; i<SIZE_ROWS; i++){
 		
 		sudoku[i] = (Square**)malloc(sizeof(Square*)*9);
 		
 		/*loop through columns */
-		for(j = 0; j<9; j++){
+		for(j = 0; j<SIZE_COLUMNS; j++){
 			sudoku[i][j] = (Square*)malloc(sizeof(Square)*9);
 			
 			sudoku[i][j]->number = puzzle[i][j]; 
@@ -58,8 +58,8 @@ void printPuzzle(int ** puzzle){
 	int i, j;
 	
 	printf("------------------------------\n");
-	for(i=0;i<9;i++){
-		for(j=0;j<9;j++){
+	for(i=0;i<SIZE_ROWS;i++){
+		for(j=0;j<SIZE_COLUMNS;j++){
 			printf(" %d ",puzzle[i][j]);
 			if((j+1)%3==0) printf("|");
 		}
