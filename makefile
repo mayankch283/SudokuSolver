@@ -6,7 +6,7 @@ SRCDIR = ./src/
 
 SOURCES = $(SRCDIR)*.c
 
-all : sudoku run clean
+all: sudoku run clean
 
 sudoku:
 	$(CC) $(SOURCES) $(CFLAGS) -o $@
@@ -16,5 +16,3 @@ run:
 
 clean:
 	rm sudoku
-
-

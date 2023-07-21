@@ -1,2 +1,1 @@
-Sudoku Solver program written using C and Java.
-
+Sudoku Solver program written using C language.

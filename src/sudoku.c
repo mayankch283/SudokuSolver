@@ -2,21 +2,32 @@
 
 int UNSOLVED = 81;
 int SIZE_ROWS = 9;
-int SIZE_COLUMNS = 0;
+int SIZE_COLUMNS = 9;
 
-int main(){
-	int ** puzzle;
-	Square *** sudoku;
-	
-	puzzle = createPuzzle();
-	
-	printPuzzle(puzzle);
+int main()
+{
+    int ** puzzle;
+    int progress;
+    Sudoku * sudoku;
 
-	sudoku = setUpPuzzle(puzzle);
+    puzzle = createPuzzle();
 
-	checkPuzzle(sudoku);
+    sudoku = setUpPuzzle(puzzle);
 
-	return 0;
+    printPuzzle(sudoku->squares);
 
+    while (UNSOLVED > 0)
+    {
+        progress = checkPuzzle(sudoku->squares, sudoku->boxes);
+
+        if (progress == 0)
+        {
+            printf("\nFailed to solve the puzzle!\n\n");
+            break;
+        }
+    }
+
+    printPuzzle(sudoku->squares);
+
+    return 0;
 }
-
